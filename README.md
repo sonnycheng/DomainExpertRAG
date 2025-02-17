@@ -1,4 +1,4 @@
-本项目将通本地 ollma和 deepseek1.5B(最小配)，代码实现本地知识库，不依赖第三方工具：dify, anythingLLM 等
+本项目将通本地 ollama和 deepseek1.5B(最小配)，代码实现本地知识库，不依赖第三方工具：dify, anythingLLM 等
 
 本项目运行环境是：
 
