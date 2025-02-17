@@ -185,7 +185,7 @@ nav {
     <h3 style="text-align:center;font-size:35px">通用大模型数据增强垂直应用--领域专家</h3>  
     <div id="message-box">
         <nav id="nav">
-            <img src="${ctx}/assets/images/admin.jpg" class="contact chip" id="chip-0"><span id="navp-00" style="font-size:14px;color:#FFCC00">法律顾问</span><span id="navp-01" style="font-size:10px"></span>
+            <img src="${ctx}/assets/images/admin.jpg" class="contact chip" id="chip-0"><span id="navp-00" style="font-size:14px;color:#FFCC00">电子员工</br>法律顾问</span><span id="navp-01" style="font-size:10px"></span>
             <!--  
             <img src="${ctx}/assets/images/others.jpg" class="contact chip" id="chip-2">
             <img src="${ctx}/assets/images/self.jpg" class="contact chip" id="chip-3"> -->
@@ -261,7 +261,6 @@ nav {
             myAjax.send(content);
             myAjax.onreadystatechange = function () {
               if (myAjax.readyState == 4 && myAjax.status == 200) {
-            	  alert("这是后台推送的消息："+myAjax.responseText);
             	  var time = new Date().Format("yyyy-MM-dd hh:mm:ss");
             	  // alert("nickname："+nickname);
 			      var message = JSON.stringify({
@@ -322,7 +321,7 @@ nav {
        
        // 把消息添加到聊天内容中
        function addMessage(message) {
-      	    alert(message);    	
+      	    
 	        message = JSON.parse(message);
 	        var num = message.fromId;
 	        // 判断该 id 是否在列表的  list 内，如果不在，就新生一个 nav 和内容的 div;
@@ -335,8 +334,6 @@ nav {
 				selector = "chat-" + num;				
 			}
 
-			alert('index:'+index);		    
-		    
 			if(index>-1){				
 				 		        
 		        var divs = document.getElementsByClassName("conversation current");
