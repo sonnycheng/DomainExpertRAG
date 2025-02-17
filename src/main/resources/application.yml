@@ -1,0 +1,51 @@
+server:
+  port: 8089
+  servlet:
+         context-path: /model
+         session:
+               timeout: PT30M
+         multipart:
+               max-file-size: 10MB
+              
+spring:
+  mvc:
+    view:
+      prefix:  /WEB-INF/
+      suffix: .jsp
+             
+                    
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.bank.pojo  # 注意：对应实体类的路径
+
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql  
+
+
+configuration:
+   log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+param:
+    demandPath:  /usr/local/prod/lucense-data/demand
+    achievePath: /usr/local/prod/lucense-data/achieve
+    #demandPath:   E:\\Temp\\index\\1118
+    #achievePath:  E:\\Temp\\index\\1117
+    adminId: 20
+    missDb: 8
+    recordNumDb: 9
+    recordsDb:  10
+
+redis:
+  host: 127.0.0.1
+  password:
+  port: 6379
+  timeout: 2000
+  maxTotal: 15 # 最大连接数
+  maxIdle: 10 # 最大空闲连接
+  minIdle: 5 # 最小空闲连接
+  maxWaitMillis: 10000 # 获取连接最大等待时间
+  testOnBorrow: true # 获取连接时检测是否可用
+    
