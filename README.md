@@ -8,6 +8,10 @@
 
 3).使用向量数据库；
 
+目前的展示情况：
+![Image text](https://github.com/sonnycheng/DomainExpertRAG/blob/main/src/main/resources/static/img/llm_pic1.jpg)
+![Image text](https://github.com/sonnycheng/DomainExpertRAG/blob/main/src/main/resources/static/img/llm_pic2.jpg)
+
 后续需要持续优化的地方包括：
 
 1).代码迁移到langchain4j 上，纯Java 实现；
